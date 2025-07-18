@@ -386,6 +386,34 @@ body {
   margin: auto;
   display: block;
 }
+.intro-flex {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.intro-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 480px;
+}
+#typed-name {
+  color: #ffe066;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0 0 0.7rem 0;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+#typed-intro {
+  color: #bfc3c9;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.7;
+}
 @media (max-width: 900px) {
   .exp-card {
     max-width: 98vw;
@@ -470,5 +498,22 @@ body {
     font-size: 0.98rem;
     margin-left: 0;
     margin-right: 0;
+  }
+  .intro-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  .intro-block {
+    align-items: center;
+    max-width: 98vw;
+  }
+  #typed-name {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  #typed-intro {
+    font-size: 0.98rem;
+    text-align: center;
   }
 } 

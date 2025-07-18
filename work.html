@@ -35,9 +35,9 @@
           <span class="exp-tech">Pinecone</span>
           <span class="exp-tech">RAG</span>
           <span class="exp-tech">Stripe</span>
-          <span class="exp-tech">Jira</span>
           <span class="exp-tech">Llama</span>
           <span class="exp-tech">ElevenLabs</span>
+          <span class="exp-tech">Jira</span>
         </div>
       </div>
     </div>
@@ -98,19 +98,27 @@
       </div>
     </div>
     <h1 class="section-header">I'm a UCLA Bruin 🖖</h1>
-    <div class="leadership-card">
-      <div class="img-placeholder">[BSA Image Here]</div>
-      <h2>Bruin Sports Analytics (BSA)</h2>
-      <div class="lead-role">Machine Learning Researcher</div>
-      <div class="lead-date">October 2024 – June 2025</div>
-      <div class="lead-desc">Co-authored a research paper evaluating wide receiver blocking using movement data and decision trees with 84% accuracy. Predicted the 2024 NFL season with 72% accuracy by feature engineering advanced metrics and training a logistic regression model.</div>
+    <div class="exp-card">
+      <div class="img-placeholder img-placeholder-white"><img src="screenshots/BSA.jpg" alt="Bruin Sports Analytics screenshot" class="exp-img exp-img-contain" /></div>
+      <div class="exp-content">
+        <div class="exp-header-row">
+          <h2>Bruin Sports Analytics (BSA)</h2>
+          <span class="exp-role-inline">Machine Learning Researcher</span>
+          <span class="exp-date-inline">October 2024 – June 2025</span>
+        </div>
+        <div class="exp-desc">Worked on two projects:<br>1) Developed a decision tree model to score NFL wide receivers’ blocking using movement data.<br>2) Built a logistic regression model leveraging NFL stats and strength of schedule to predict each team’s odds of winning the 2024 season.</div>
+      </div>
     </div>
-    <div class="leadership-card">
-      <div class="img-placeholder">[DataResolutions Image Here]</div>
-      <h2>Data Resolutions @ UCLA</h2>
-      <div class="lead-role">Data Learn Lead</div>
-      <div class="lead-date">March 2025 – Present</div>
-      <div class="lead-desc">Leading weekly machine learning, Python, and SQL workshops; mentoring 300+ students through hands-on labs and projects.</div>
+    <div class="exp-card">
+      <div class="img-placeholder"><img src="screenshots/Datares.jpeg" alt="Data Resolutions screenshot" class="exp-img" /></div>
+      <div class="exp-content">
+        <div class="exp-header-row">
+          <h2>Data Resolutions @ UCLA</h2>
+          <span class="exp-role-inline">Data Learn Lead</span>
+          <span class="exp-date-inline">March 2025 – Present</span>
+        </div>
+        <div class="exp-desc">Leading weekly meetings for around 300 undergrads, teaching machine learning, data science (Python, pandas, numpy), and SQL basics, and provide project guidance and mentorship throughout their hands-on work.</div>
+      </div>
     </div>
   </main>
   <footer>
@@ -120,5 +128,18 @@
     </div>
   </footer>
   <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.exp-card').tilt({
+        glare: true,
+        maxGlare: 0.18,
+        scale: 1.04,
+        speed: 600,
+        perspective: 1200
+      });
+    });
+  </script>
 </body>
 </html> 

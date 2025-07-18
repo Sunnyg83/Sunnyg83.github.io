@@ -20,12 +20,14 @@
     </ul>
   </nav>
   <main class="center-content">
-    <div class="profile-pic">
-      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Placeholder">
-    </div>
-    <div class="intro-text">
-      <h1 id="typed-name"></h1>
-      <p id="typed-intro"></p>
+    <div class="intro-flex">
+      <div class="profile-pic">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Placeholder">
+      </div>
+      <div class="intro-block">
+        <h1 id="typed-name">Hi! I'm Sankeerth Gandhari 👋 |</h1>
+        <p id="typed-intro">I'm a Mathematics and Computer Science student at UCLA with a passion for building innovative solutions. My other hobbies include learning abut AI, playing tennis 🎾, and bringing innovative ideas to life 💡.</p>
+      </div>
     </div>
     <div class="social-icons">
       <a href="https://linkedin.com/in/sankeerthgandhari/" aria-label="LinkedIn" target="_blank"><svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.043 0 3.604 2.004 3.604 4.609v5.587z"/></svg></a>
@@ -38,26 +40,5 @@
       </div>
     </footer>
   <script src="main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      new TypeIt('#typed-name', {
-        strings: ["Hi! I'm Sankeerth Gandhari 👋 |"],
-        speed: 60,
-        waitUntilVisible: true,
-        cursor: true,
-        afterComplete: function(instance) { instance.destroy(); }
-      }).go();
-      new TypeIt('#typed-intro', {
-        strings: [
-          "I'm a Mathematics and Computer Science student at UCLA with a passion for building innovative solutions. My other hobbies include learning abut AI, playing tennis 🎾, and bringing innovative ideas to life 💡."
-        ],
-        speed: 38,
-        waitUntilVisible: true,
-        startDelay: 1200,
-        cursor: false,
-        afterComplete: function(instance) { instance.destroy(); }
-      }).go();
-    });
-  </script>
 </body>
 </html> 
