@@ -19,16 +19,23 @@
     </ul>
   </nav>
   <main class="center-content">
-    <section class="contact-section">
-      <h1>Contact Me</h1>
-      <p>Email: <a href="mailto:sgandhari06@gmail.com" style="color:#2774AE;">sgandhari06@gmail.com</a></p>
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" style="background:#2774AE;color:#fff;">Send</button>
-      </form>
-    </section>
+    <h1 class="section-header">I'm only a message away 💬</h1>
+    <div class="exp-card">
+      <div class="exp-content">
+        <div class="exp-header-row">
+          <h2>Get In Touch</h2>
+          <span class="exp-role-inline">Let's Connect</span>
+          <span class="exp-date-inline">Always Available</span>
+        </div>
+        <div class="exp-desc">Feel free to reach out for collaborations, opportunities, or just to say hello!</div>
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
   </main>
   <footer>
     <div class="footer-social-icons">
@@ -37,5 +44,27 @@
     </div>
   </footer>
   <script src="main.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const message = formData.get('message');
+      
+      // Create mailto link with form data
+      const mailtoLink = `mailto:sgandhari06@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      alert('Thank you for your message! Your email client should open automatically.');
+      
+      // Reset form
+      this.reset();
+    });
+  </script>
 </body>
 </html> 

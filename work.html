@@ -37,7 +37,7 @@
           <span class="exp-tech">Stripe</span>
           <span class="exp-tech">Llama</span>
           <span class="exp-tech">ElevenLabs</span>
-          <span class="exp-tech">Jira</span>
+          <span class="exp-tech">REST APIs</span>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@
           <span class="exp-tech">MongoDB</span>
           <span class="exp-tech">Vercel</span>
           <span class="exp-tech">Railway</span>
-          <span class="exp-tech">Socket.io</span>
+          <span class="exp-tech">Firebase</span>
         </div>
       </div>
     </div>
@@ -92,6 +92,7 @@
         <div class="exp-tech-row">
           <span class="exp-tech">Python</span>
           <span class="exp-tech">Gemini AI</span>
+          <span class="exp-tech">Prompt Engineering</span>
           <span class="exp-tech">Reinforcement Learning</span>
           <span class="exp-tech">Neural Networks</span>
         </div>
@@ -106,7 +107,7 @@
           <span class="exp-role-inline">Machine Learning Researcher</span>
           <span class="exp-date-inline">October 2024 – June 2025</span>
         </div>
-        <div class="exp-desc">Worked on two projects:<br>1) Developed a decision tree model to score NFL wide receivers’ blocking using movement data.<br>2) Built a logistic regression model leveraging NFL stats and strength of schedule to predict each team’s odds of winning the 2024 season.</div>
+        <div class="exp-desc">Worked on two projects:<br>1) Co-developed a decision tree model to score 181 NFL wide receivers’ blocking using movement data.<br>2) Built a logistic regression model leveraging NFL stats and strength of schedule to predict each team’s odds of winning the 2024 season.</div>
       </div>
     </div>
     <div class="exp-card">
@@ -140,6 +141,33 @@
         perspective: 1200
       });
     });
+
+    // GitHub API Integration
+    async function fetchGitHubStats() {
+      try {
+        const response = await fetch('https://api.github.com/repos/Sunnyg83/Peer_Finding_Network_UCLA');
+        const data = await response.json();
+        
+        if (response.ok) {
+          document.getElementById('stars').textContent = data.stargazers_count;
+          document.getElementById('forks').textContent = data.forks_count;
+          document.getElementById('language').textContent = data.language || 'N/A';
+        } else {
+          // Handle API rate limiting or errors gracefully
+          document.getElementById('stars').textContent = 'N/A';
+          document.getElementById('forks').textContent = 'N/A';
+          document.getElementById('language').textContent = 'N/A';
+        }
+      } catch (error) {
+        console.log('GitHub API error:', error);
+        document.getElementById('stars').textContent = 'N/A';
+        document.getElementById('forks').textContent = 'N/A';
+        document.getElementById('language').textContent = 'N/A';
+      }
+    }
+
+    // Fetch GitHub stats when page loads
+    fetchGitHubStats();
   </script>
 </body>
 </html> 

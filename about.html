@@ -19,19 +19,49 @@
     </ul>
   </nav>
   <main class="center-content">
-    <section class="about-section">
-      <h1>About Me</h1>
-      <p>I'm Sankeerth Gandhari, a Mathematics and Computer Science student at UCLA, passionate about building innovative solutions and AI research.</p>
-      <h2 style="color:#2774AE;">Education</h2>
-      <p><strong>University of California, Los Angeles</strong> (Expected June 2027)<br>
-      B.S. in Mathematics and Computer Science, Minor: Data Science Engineering<br>
-      GPA: 3.53 / 4.00 | Dean’s Honors List</p>
-      <h2 style="color:#2774AE;">Skills</h2>
-      <ul>
-        <li>Languages: Python, C++, JavaScript, R, SQL, Java, HTML, CSS, TypeScript, Assembly</li>
-        <li>Frameworks/Tools: Git, MongoDB, Express, React, Node.js, Linux, Flask, Docker, Pandas, NumPy, PyTorch, TensorFlow, Figma</li>
-      </ul>
-    </section>
+
+    <h1 class="section-header">I'm a sports enthusiast 🏃‍♂️</h1>
+    <div class="exp-card">
+      <div class="img-placeholder">
+        <div class="exp-img-placeholder-text">🎾</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-header-row">
+          <h2>Tennis</h2>
+          <span class="exp-role-inline">Player, Coach, & Fan</span>
+          <span class="exp-date-inline">Since Childhood</span>
+        </div>
+        <div class="exp-desc">Active tennis player and coach. Love the strategic elements of the game and following professional tennis tournaments.</div>
+      </div>
+    </div>
+    <div class="exp-card">
+      <div class="img-placeholder">
+        <div class="exp-img-placeholder-text">🏈</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-header-row">
+          <h2>Football</h2>
+          <span class="exp-role-inline">NFL Fan</span>
+          <span class="exp-date-inline">Since Childhood</span>
+        </div>
+        <div class="exp-desc">Passionate about football analytics and statistics. Love analyzing player performance, team strategies, and the mathematical side of sports.</div>
+      </div>
+    </div>
+
+    <h1 class="section-header">I'm a guitar player 🎸</h1>
+    <div class="exp-card">
+      <div class="img-placeholder">
+        <div class="exp-img-placeholder-text">🎸</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-header-row">
+          <h2>Guitar</h2>
+          <span class="exp-role-inline">Musician</span>
+          <span class="exp-date-inline">Since 3rd grade</span>
+        </div>
+        <div class="exp-desc">Passionate guitarist who enjoys playing various genres. Music provides a creative outlet and helps balance the analytical work in computer science.</div>
+      </div>
+    </div>
   </main>
   <footer>
     <div class="footer-social-icons">
@@ -40,5 +70,18 @@
     </div>
   </footer>
   <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.exp-card').tilt({
+        glare: true,
+        maxGlare: 0.18,
+        scale: 1.04,
+        speed: 600,
+        perspective: 1200
+      });
+    });
+  </script>
 </body>
 </html> 
