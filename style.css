@@ -389,6 +389,37 @@ body {
   padding: 1.6rem 1.6rem 1.2rem 1.6rem;
   margin: 0 auto 2rem auto;
 }
+.exp-card {
+  min-height: 300px;
+  max-width: 1300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1);
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.exp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.10) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  pointer-events: none;
+}
+
+.exp-card:hover::before {
+  transform: translateX(100%);
+}
+
+.exp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(39,116,174,0.25);
+}
 .exp-card:last-of-type, .leadership-card:last-of-type {
   margin-bottom: 0;
 }
@@ -459,31 +490,124 @@ body {
   background: none;
   padding: 0;
 }
+
+/* Tennis photos side by side */
+.img-placeholder:has(img[src*="Tennis"]) {
+  display: flex;
+}
+
+.img-placeholder:has(img[src*="Tennis"]) img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Spotify Embed Styling */
+.spotify-subtitle {
+  color: #a5b4fc;
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.spotify-embed {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: none;
+  min-height: 200px;
+  width: 100%;
+  border: none;
+}
+
+.spotify-embed iframe {
+  border-radius: 12px;
+  width: 80%;
+  max-width: 80%;
+  min-height: 200px;
+  height: 200px !important;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  outline: none;
+}
+
+/* Comedian Card Styling */
+.comedian-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1rem auto 2rem auto;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.comedian-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.comedian-card:hover::before {
+  transform: translateX(100%);
+}
+
+.comedian-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+}
+
+.comedian-icon {
+  font-size: 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.comedian-content {
+  flex: 1;
+}
+
+.comedian-content h3 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.02em;
+}
+
+.comedian-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+
 .exp-img-contain {
   object-fit: contain !important;
-}
-.exp-card {
-  min-height: 300px;
-  max-width: 1300px;
-}
-.exp-tech-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.7rem;
-}
-.exp-tech {
-  background: linear-gradient(120deg, #2774AE 0%, #6EC1E4 100%);
-  color: #fff;
-  font-size: 0.98rem;
-  font-weight: 600;
-  border-radius: 16px;
-  padding: 0.22em 1em 0.22em 1em;
-  margin: 0;
-  display: inline-block;
-  letter-spacing: 0.01em;
-  box-shadow: 0 2px 8px rgba(39,116,174,0.10);
-  white-space: nowrap;
 }
 .exp-card {
   width: 100%;
@@ -673,4 +797,81 @@ body {
     font-size: 0.98rem;
     text-align: center;
   }
+} 
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0 0.5rem 0;
+}
+.footer-social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #000;
+  border-radius: 8px;
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  font-size: 1.7rem;
+  border: none;
+  text-decoration: none;
+}
+.footer-social-icons a svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+  display: block;
+}
+.footer-social-icons a:hover {
+  transform: translateY(-4px) scale(1.08);
+  background: #fff;
+  color: #222;
+}
+.footer-social-icons a:active {
+  box-shadow: 0 0 16px 4px #fff, 0 6px 24px rgba(0,0,0,0.18);
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-top: 2rem;
+} 
+
+.exp-img-football {
+  object-fit: contain !important;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: block;
+  background: none;
+  object-position: center;
+}
+.img-placeholder img.exp-img-football {
+  background: none;
+  box-shadow: none;
+}
+/* Make the football card's image placeholder fit the image's aspect ratio and shrink to content */
+.exp-card .img-placeholder:has(.exp-img-football) {
+  width: 260px;
+  min-width: 0;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #18345b;
+  border-radius: 14px;
+  border: 2.5px solid #111;
+  margin-bottom: 0;
+  margin-right: 2.5rem;
+  box-shadow: 0 2px 8px rgba(24,52,91,0.10);
+  overflow: hidden;
 } 

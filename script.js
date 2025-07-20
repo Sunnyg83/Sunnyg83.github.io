@@ -5,7 +5,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 // Typing animation for name and intro using TypeIt.js
 new TypeIt('#typed-name', {
-  strings: ["Hi! I'm Sankeerth Gandhari 👋 |"],
+  strings: ["Hi! I'm Sankeerth Gandhari 👋"],
   speed: 60,
   waitUntilVisible: true,
   cursor: true,

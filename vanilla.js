@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Typing animation only on index.html
   if (document.getElementById('typed-name') && window.TypeIt) {
     new TypeIt('#typed-name', {
-      strings: ["Hi! I'm Sankeerth Gandhari 👋 |"],
+      strings: ["Hi! I'm Sankeerth Gandhari 👋"],
       speed: 60,
       waitUntilVisible: true,
       cursor: true,
