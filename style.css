@@ -886,3 +886,37 @@ footer {
   color: #222;
   transform: translateY(-4px) scale(1.08);
 } 
+body.light-mode {
+  background: #fff !important;
+  color: #181824 !important;
+}
+body.light-mode .exp-card, body.light-mode .leadership-card {
+  background: #f5f5f5 !important;
+  color: #181824 !important;
+}
+body.light-mode .section-header,
+body.light-mode .exp-card h2, body.light-mode .leadership-card h2 {
+  color: #181824 !important;
+}
+body.light-mode .exp-role-inline, body.light-mode .exp-date-inline {
+  color: #2d2d2d !important;
+}
+body.light-mode .exp-card .exp-desc, body.light-mode .leadership-card .lead-desc {
+  color: #222 !important;
+}
+body.light-mode .img-placeholder, body.light-mode .img-placeholder-football, body.light-mode .img-placeholder-guitar {
+  background: #eaeaea !important;
+}
+body.light-mode .footer-social-icons a, body.light-mode .header-social-icons a {
+  background: #fff !important;
+  color: #181824 !important;
+  border: 1px solid #181824 !important;
+}
+body.light-mode .footer-social-icons a:hover, body.light-mode .header-social-icons a:hover {
+  background: #f0f0f0 !important;
+  color: #181824 !important;
+  box-shadow: 0 0 16px 4px #181824, 0 6px 24px rgba(0,0,0,0.10);
+}
+body.light-mode a {
+  color: #2774AE !important;
+} 
