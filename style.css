@@ -920,3 +920,22 @@ body.light-mode .footer-social-icons a:hover, body.light-mode .header-social-ico
 body.light-mode a {
   color: #2774AE !important;
 } 
+
+.exp-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.exp-tech {
+  background: #18345b;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 1rem;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(24,52,91,0.10);
+  letter-spacing: 0.02em;
+} 
