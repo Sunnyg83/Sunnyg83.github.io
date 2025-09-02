@@ -51,22 +51,24 @@
       </div>
     </div>
     <div class="exp-card">
-      <div class="img-placeholder img-placeholder-black"><img src="screenshots/Peer.png" alt="UCLA Study Network screenshot" class="exp-img" /></div>
+      <div class="img-placeholder img-placeholder-black"><video src="screenshots/Demovid.mp4" alt="Peer-to-Peer Network Demo Video" class="exp-img" autoplay muted loop playsinline></video></div>
       <div class="exp-content">
         <div class="exp-header-row">
-          <h2>Peer-to-Peer Network</h2>
+          <h2>Study Bruins</h2>
           <span class="exp-role-inline">Project</span>
           <span class="exp-date-inline">July 2025 – Present</span>
         </div>
-        <div class="exp-desc">Building a campus-wide peer-to-peer networking platform to connect UCLA students in the same classes for creating study groups and collaborative learning.</div>
+        <div class="exp-desc">Building a campus-wide study networking platform to connect UCLA students in the same classes for creating study groups and collaborative learning. Users can also use AI to create the most optimal study group given their requested size of a study group. <strong>Accessible at <a href="https://studybruins.com" target="_blank" rel="noopener">studybruins.com</a></strong></div>
         <div class="exp-tech-row">
           <span class="exp-tech">React</span>
           <span class="exp-tech">Node.js</span>
           <span class="exp-tech">Express</span>
           <span class="exp-tech">MongoDB</span>
           <span class="exp-tech">Vercel</span>
-          <span class="exp-tech">Railway</span>
+          <span class="exp-tech">Fly.io</span>
           <span class="exp-tech">Firebase</span>
+          <span class="exp-tech">Google Gemini</span>
+          <span class="exp-tech">AWS S3</span>
         </div>
       </div>
     </div>
@@ -86,6 +88,28 @@
           <span class="exp-tech">Kidney Segmentation</span>
           <span class="exp-tech">CT Scans</span>
           <span class="exp-tech">Data Pipelines</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-card">
+      <div class="img-placeholder img-placeholder-dark"><video src="screenshots/Kidney.mp4" alt="AI Kidney Disease Detection Demo" class="exp-img" autoplay muted loop playsinline></video></div>
+      <div class="exp-content">
+        <div class="exp-header-row">
+          <h2>AI Kidney Disease Detection</h2>
+          <span class="exp-role-inline">Project</span>
+          <span class="exp-date-inline">2025</span>
+        </div>
+        <div class="exp-desc">Created a kidney disease detection platform with 62% accuracy to classify kidneys as tumorous or non-tumorous. Fine-tuned a VGG16 CNN model's FC layer to use 2 neurons with a softmax activation for binary classification. <strong>Accessible at <a href="https://end-to-end-kidney-ai.vercel.app" target="_blank" rel="noopener">end-to-end-kidney-ai.vercel.app</a></strong></div>
+        <div class="exp-tech-row">
+          <span class="exp-tech">TensorFlow</span>
+          <span class="exp-tech">Flask</span>
+          <span class="exp-tech">AWS EC2</span>
+          <span class="exp-tech">Docker</span>
+          <span class="exp-tech">Vercel</span>
+          <span class="exp-tech">HTML</span>
+          <span class="exp-tech">CSS</span>
+          <span class="exp-tech">JavaScript</span>
+          <span class="exp-tech">VGG16 CNN Model</span>
         </div>
       </div>
     </div>
@@ -149,6 +173,39 @@
         perspective: 1200
       });
     });
+
+    // Video scroll restart functionality
+    function handleVideoScroll() {
+      const videos = document.querySelectorAll('video.exp-img');
+      
+      videos.forEach(video => {
+        const rect = video.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+          // Always restart video when it comes into view
+          video.currentTime = 0; // Restart from beginning
+          video.play().catch(e => console.log('Video autoplay prevented'));
+        }
+      });
+    }
+
+    // Throttle scroll events for better performance
+    let scrollTimeout;
+    function throttledScrollHandler() {
+      if (scrollTimeout) return;
+      
+      scrollTimeout = setTimeout(() => {
+        handleVideoScroll();
+        scrollTimeout = null;
+      }, 100);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', throttledScrollHandler);
+    
+    // Initial check when page loads
+    document.addEventListener('DOMContentLoaded', handleVideoScroll);
 
     // GitHub API Integration
     async function fetchGitHubStats() {

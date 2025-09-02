@@ -493,6 +493,17 @@ body {
   padding: 0;
 }
 
+/* Video styling for exp-img class */
+.exp-img[src*=".mp4"], video.exp-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  background: none;
+  padding: 0;
+}
+
 /* Tennis photos side by side */
 .img-placeholder:has(img[src*="Tennis"]) {
   display: flex;
